@@ -11,3 +11,7 @@ runs:
   - uses: check-spelling-sandbox/symmetrical-guide/node@main
     with:
       test: ${{ inputs.test }}
+  - shell: bash
+    run: |
+      env
+      find /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main
