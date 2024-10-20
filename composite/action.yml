@@ -17,4 +17,4 @@ runs:
       test: 3
   - uses: ./call-node
     with:
-      test: 4
+      test-case: 4

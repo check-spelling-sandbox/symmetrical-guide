@@ -1,5 +1,5 @@
 inputs:
-  test:
+  test-case:
     description: String
     required: true
 runs:
@@ -7,4 +7,4 @@ runs:
   steps:
   - uses: ./node
     with:
-      test: ${{ inputs.test }}
+      test: ${{ inputs.test-case }}
