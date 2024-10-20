@@ -16,6 +16,10 @@ runs:
     run: |
       : composite
       echo "composite ($TESTING)"
+  - shell: bash
+    run: |
+      : check env
+      echo 'console.log("composite: "+JSON.stringify(process.env))'|node
   - uses: ./node
     with:
       test: 3

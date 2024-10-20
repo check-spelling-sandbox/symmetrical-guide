@@ -8,6 +8,10 @@ inputs:
 runs:
   using: composite
   steps:
+  - shell: bash
+    run: |
+      : call2-node check env
+      echo 'console.log("call2-node: "+JSON.stringify(process.env))'|node
   - uses: ./call-node
     with:
       test: ${{ inputs.test-case }}

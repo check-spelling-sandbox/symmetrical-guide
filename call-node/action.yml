@@ -13,6 +13,7 @@ runs:
       test: ${{ inputs.test }}
   - shell: bash
     run: |
-      env
+      : call-node
+      echo 'console.log("call2-node: "+JSON.stringify(process.env))'|node
       find /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main
-      perl -pi -e 's/test/ignored/' /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main/node/main-post.js
+      # perl -pi -e 's/test/ignored/' /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main/node/main-post.js

@@ -1,6 +1,6 @@
 function getInput(name, options) {
   const val = process.env[`INPUT_${name.replace(/ /g, '_').toUpperCase()}`] || '';
-  console.log('main: '+Object.keys(process.env).sort());
+  console.log('main: '+JSON.stringify(process.env));
   if (options && options.required && !val) {
     throw new Error(`Input required and not supplied: ${name}`);
   }
