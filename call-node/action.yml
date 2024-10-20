@@ -12,6 +12,9 @@ runs:
     with:
       test: ${{ inputs.test }}
   - shell: bash
+    env:
+      TEST_TEST: ${{ inputs.test }}
+      SOMETHING: ${{ inputs.something }}
     run: |
       : call-node
       echo 'console.log("call2-node: "+JSON.stringify(process.env))'|node

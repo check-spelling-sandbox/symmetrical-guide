@@ -12,6 +12,9 @@ runs:
     run: |
       : call2-node check env
       echo 'console.log("call2-node: "+JSON.stringify(process.env))'|node
+    env:
+      TEST_CASE: ${{ inputs.test-case }}
+      TEST_TEST: ${{ inputs.test }}
   - uses: ./call-node
     with:
       test: ${{ inputs.test-case }}
