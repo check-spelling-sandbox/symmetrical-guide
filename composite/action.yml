@@ -18,3 +18,6 @@ runs:
   - uses: ./call2-node
     with:
       test-case: 4
+      test: 5
+    env:
+      INPUT_TEST: 6

@@ -2,6 +2,9 @@ inputs:
   test:
     description: String
     required: true
+  something:
+    description: String
+    required: false
 runs:
   using: composite
   steps:
