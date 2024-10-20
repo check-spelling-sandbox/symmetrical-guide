@@ -1,0 +1,8 @@
+inputs:
+  test:
+    description: String
+    required: true
+runs:
+  using: node20
+  main: 'main.js'
+  post: 'main-post.js'

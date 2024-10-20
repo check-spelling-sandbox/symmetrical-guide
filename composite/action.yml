@@ -1,0 +1,15 @@
+inputs:
+  test:
+    description: String
+    required: true
+runs:
+  using: composite
+  steps:
+  - shell: bash
+    env:
+      TEST: ${{ inputs.test }}
+    run: |
+      echo "composite ($TEST)"
+  - uses: ./node
+    with:
+      test: 3
