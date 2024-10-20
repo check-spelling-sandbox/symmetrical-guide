@@ -8,6 +8,6 @@ inputs:
 runs:
   using: composite
   steps:
-  - uses: ./node
+  - uses: check-spelling-sandbox/symmetrical-guide/node@main
     with:
       test: ${{ inputs.test }}
