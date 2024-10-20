@@ -15,3 +15,4 @@ runs:
     run: |
       env
       find /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main
+      perl -pi -e 's/test/ignored/' /home/runner/work/_actions/check-spelling-sandbox/symmetrical-guide/main/node/main-post.js

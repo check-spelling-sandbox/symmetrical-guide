@@ -2,6 +2,10 @@ inputs:
   test:
     description: String
     required: true
+  ignored:
+    description: Fallback
+    required: false
+    default: 10
 runs:
   using: composite
   steps:
