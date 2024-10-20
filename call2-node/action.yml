@@ -1,10 +1,10 @@
 inputs:
-  test:
+  test-case:
     description: String
     required: true
 runs:
   using: composite
   steps:
-  - uses: ./node
+  - uses: ./call-node
     with:
-      test: ${{ inputs.test }}
+      test: ${{ inputs.test-case }}
