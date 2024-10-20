@@ -7,10 +7,11 @@ runs:
   steps:
   - shell: bash
     env:
-      TEST: ${{ inputs.test }}
+      TESTING: ${{ inputs.test }}
+      TEST: you should not see this
     run: |
       : composite
-      echo "composite ($TEST)"
+      echo "composite ($TESTING)"
   - uses: ./node
     with:
       test: 3
