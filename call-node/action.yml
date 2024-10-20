@@ -1,0 +1,10 @@
+inputs:
+  test:
+    description: String
+    required: true
+runs:
+  using: composite
+  steps:
+  - uses: ./node
+    with:
+      test: ${{ inputs.test }}

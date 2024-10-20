@@ -9,7 +9,11 @@ runs:
     env:
       TEST: ${{ inputs.test }}
     run: |
+      : composite
       echo "composite ($TEST)"
   - uses: ./node
     with:
       test: 3
+  - uses: ./call-node
+    with:
+      test: 4
